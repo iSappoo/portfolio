@@ -4,7 +4,7 @@ const pics = {};
 const bioData = [
     // about me
     {
-        paragraph: "Hello everyone! I am <strong>Sapana Priyadarshanee</strong>, graducate from <b>Chandigarh University</b> Punjab. I am very passinated about my career and have achieved many technical skill with good understanding and experience.<br><br> I am currentaly looking for a part-time job."
+        paragraph: "Hello everyone! I am <strong>Sapana Priyadarshanee</strong>, graduated from <b>Chandigarh University</b>, Punjab. I am passionate about my career and have achieved many technical skills with a good understanding and experience.<br><br> I am currently looking for a part-time job."
     }
 ]
 // Academic record
