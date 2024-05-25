@@ -1,6 +1,10 @@
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 :root {
-    --paragraph-font-size: 1.3em
+    --paragraph-font-size: 1.3em;
+    --color-secondary: #808080;
 }
 
 html {
@@ -52,6 +56,10 @@ nav li a:hover, .selected {
 
 img {
     pointer-events: none;
+}
+
+strong, b {
+    color: black;
 }
 /* ================================================== */
 
@@ -159,7 +167,7 @@ img {
 }
 
 .projects-container {
-    background-color: rgb(102, 91, 112);
+    background-color: rgb(140, 103, 174);
     margin: 10px 30px;
     border-radius: 20px;
     padding: 10px;
@@ -214,7 +222,7 @@ img {
 }
 
 .hard-skills {
-    background-color: rgb(136, 136, 231);
+    background-color: rgb(179, 179, 219);
 }
 
 .hard-skills .skill >:nth-child(1) {
@@ -268,8 +276,8 @@ footer {
     color: rgb(225, 207, 207);
 }
 
-.footer-container {
-    box-sizing: border-box;
+.footer-container > div {
+    margin: 15px 0;
 }
 
 footer h6 {
@@ -333,7 +341,13 @@ hr {
 
 /* screen 750 */
 @media screen and (max-width: 750px) {
-
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        order: 3;
+    }
     
 
     .section-h1 {
@@ -348,10 +362,21 @@ hr {
     }
     .home-container {
         display: block;
+        background: linear-gradient(45deg, rgb(74, 74, 201), rgb(222, 77, 77));
+
     }
     .home-container div {
         width: 100%;
-        height: 40vh;
+        /* height: 40vh; */
+    }
+    .home-container div:nth-child(1) {
+        height: 30vh;
+        background: transparent;
+        justify-content: end;
+    }
+    .home-container div:nth-child(2) {
+        height: 53vh;
+        background: transparent;
     }
     .name {
         font-size: 1.4em;
@@ -359,9 +384,6 @@ hr {
     }
     .name h1, h6 {
         margin: 0;
-    }
-    .image-div {
-        background: linear-gradient(45deg, blue, red);
     }
     .image-div img {
         height: 300px;
@@ -379,10 +401,13 @@ hr {
     }
 
     .abouts-pic img {
-        width: 100%;
+        width: 80%;
         box-shadow: 5px 5px 5px black;
-        border-radius: 4px;
-        margin: 0;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: none;
+        border: 2px solid black;
     }
     .abouts-pic:hover {
         transform: none;
@@ -394,6 +419,11 @@ hr {
         padding: 3px;
         font-size: 12px;
     }
+    .projects-container {
+        margin: inherit;
+        padding: inherit;
+        font-size: 1.3em;
+    }
 
     /* skills */
     .skills {
@@ -401,12 +431,13 @@ hr {
         padding: 3px;
         font-size: 12px;
     }
-    body {
-        display: flex;
-        flex-direction: column;
+
+    .skills-container {
+        margin: 10px;
     }
-    header {
-        order: 3;
+
+    .skills-container > div {
+        /* margin: 0; */
+        padding: 10px;
     }
-    
 }
