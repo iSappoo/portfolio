@@ -210,4 +210,6 @@ for(let ele of socialMedia) {
     link.setAttribute('href', ele.link);
     link.setAttribute('target', '_blank');
     link.style.textDecoration = 'none';
+    link.style.backgroundColor = 'white';
+    link.style.padding = '2px 5px';
 }
