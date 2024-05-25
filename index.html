@@ -1,18 +1,97 @@
-for(let ele of hardSkillList) {
-    const skill = document.createElement("div");
-    skill.classList.add("skill");
+<!DOCTYPE html>
+<html lang="en">
 
-    const div1 = document.createElement("div");
-    const div2 = document.createElement("div");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    const progress = document.createElement("div");
-    progress.classList.add("progress");
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                    <a href="#abouts">Abouts</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#footer">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hoem">
+            <div class="home-container">
+                <div class="name">
+                    <h1>Sapana Priyadarshanee</h1>
+                    <h6>@iSappoo</h6>
+                </div>
+                <div class="image-div">
+                    <img src="docs/Sapana6.jpg" alt="error">
+                </div>
+            </div>
+        </section>
+        <section id="abouts" class="abouts">
+            <h1 class="section-h1">Abouts</h1>
+            <div class="abouts-container">
+                <div class="details">
+                    <p class="paragraph"></p>
+                </div>
+                <div class="abouts-pic">
+                    <img src="docs/Sapana2.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h1 class="section-h1">Projects</h1>
+            <div class="projects-container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque incidunt labore, repellendus nam,
+                quibusdam ipsa temporibus reprehenderit commodi adipisci non dolores. Iusto animi architecto dolore
+                quis ipsam magnam quas placeat!
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <h1 class="section-h1">Skills</h1>
+            <div class="skills-container">
+                <div class="hard-skills">
+                    <h3>Hard Skills</h3>
+                </div>
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <div class="skill">
+                        <span>Hindi</span><span class="level">Fluent</span>
+                    </div>
+                    <div class="skill">
+                        <span>English</span><span class="level"></span>
+                    </div>
+                    <div class="skill">
+                        <span>Risk Managament</span><span class="level"></span>
+                    </div>
+                    <div class="skill">
+                        <span>Collaborative</span><span class="level"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="contacts">
+                <h3>Contacts</h3>
+                <ul>
+                    <li>Email: <span>SapanaPriyadarshanee@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h6>copyright &copy; 2024</h6>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 
-    div1.textContent = ele.skill_name;
-
-    skill.appendChild(div1);
-    skill.appendChild(div2);
-    div2.appendChild(progress);
-
-    hardSkill.appendChild(skill);
-}
+</html>
