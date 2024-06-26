@@ -95,18 +95,25 @@ const project = [
 
 const projectContainer = document.querySelector(".projects-container");
 projectContainer.innerHTML = '';
-const projectDiv = document.createElement("div");
-projectDiv.classList.add("project-div");
-projectContainer.appendChild(projectDiv);
 
-const projectName = document.createElement("h1");
-const description = document.createElement("p");
+for(let ele of project) {
+    const projectDiv = document.createElement("div");
+    projectDiv.classList.add("project-div");
+    projectContainer.appendChild(projectDiv);
+    if(project.length > 1) {
+        projectDiv.style.margin = '10px';
+    }
+    
+    const projectName = document.createElement("h1");
+    const description = document.createElement("p");
+    
+    projectDiv.appendChild(projectName);
+    projectDiv.appendChild(description);
+    
+    projectName.innerHTML = ele.projectName;
+    description.innerHTML = ele.description;
+}
 
-projectDiv.appendChild(projectName);
-projectDiv.appendChild(description);
-
-projectName.innerHTML = project[0].projectName;
-description.innerHTML = project[0].description;
 // project section ends
 
 // ==============================================================================
@@ -182,7 +189,11 @@ for(let ele of hardSkillList) {
 // footer contents
 const footerContainer = document.querySelector(".footer-container");
 const mediaContainer = document.createElement("div");
+const h3 = document.createElement("h3");
+h3.textContent = 'Social Media';
+mediaContainer.classList.add("media-container");
 footerContainer.appendChild(mediaContainer);
+mediaContainer.appendChild(h3);
 
 const socialMedia = [
     // insta
@@ -194,6 +205,11 @@ const socialMedia = [
     {
         media_name: "Linkedin",
         link: "https://linkedin.com/in/Sappoo"
+    },
+    // Github
+    {
+        media_name: "GitHub",
+        link: "https://github.com/Sappoo"
     }
 ];
 
@@ -204,12 +220,10 @@ for(let ele of socialMedia) {
 
     mediaContainer.appendChild(mediaDiv);
     mediaDiv.appendChild(span1);
+    mediaDiv.style.margin = '10px';
     span1.appendChild(link);
 
     link.textContent = ele.media_name;
     link.setAttribute('href', ele.link);
     link.setAttribute('target', '_blank');
-    link.style.textDecoration = 'none';
-    link.style.backgroundColor = 'white';
-    link.style.padding = '2px 5px';
 }
